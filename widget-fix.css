@@ -1,27 +1,20 @@
-/* Remove excess white space and fix inner card corners */
-.prechat-form-container,
-.pre-chat-form,
-[class*="prechat"],
-[class*="pre-chat"] {
+/* Fix the white card - remove excess height and round bottom corners */
+.card-body {
+  max-height: none !important;
+  height: auto !important;
+  border-radius: 0 0 12px 12px !important;
   margin: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
 }
 
-/* Fix the white card/panel inside the blue widget */
-.chat-widget-body,
-.widget-body,
-[class*="widget-body"],
-[class*="chat-body"] {
+/* Remove gap/padding from the outer flex container */
+.fn-open-view {
+  gap: 0 !important;
   padding: 0 !important;
-  margin: 0 !important;
 }
 
-/* Target the inner white container specifically */
-.five9-frame,
-.five9-chat-body,
-.five9-prechat {
-  border-radius: 0 0 12px 12px !important; /* match widget bottom corners */
-  margin: 0 !important;
-  padding: 16px !important;
+/* Fix banner area top portion */
+.fn-open-view\.banner,
+[class*="banner"] {
+  border-radius: 12px 12px 0 0 !important;
+  margin-bottom: 0 !important;
 }
