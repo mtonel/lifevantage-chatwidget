@@ -1,20 +1,21 @@
-/* Fix the white card - remove excess height and round bottom corners */
-.card-body {
-  max-height: none !important;
-  height: auto !important;
+/* Kill the gap between banner and white card */
+.root .gap-2 {
+  gap: 0 !important;
+}
+
+/* Remove white card's rounded top corners so it flush-fits the banner */
+.root .card-body {
   border-radius: 0 0 12px 12px !important;
   margin: 0 !important;
 }
 
-/* Remove gap/padding from the outer flex container */
-.fn-open-view {
+/* Remove any padding inside the main flex wrapper */
+.root main {
   gap: 0 !important;
   padding: 0 !important;
 }
 
-/* Fix banner area top portion */
-.fn-open-view\.banner,
-[class*="banner"] {
-  border-radius: 12px 12px 0 0 !important;
-  margin-bottom: 0 !important;
+/* Target the exact div shown in your screenshot */
+.root .flex-col.h-\[100\%\].w-\[100\%\].overflow-auto.items-center.gap-2 {
+  gap: 0 !important;
 }
