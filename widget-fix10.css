@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #00A7E1;
+}
+
+[data-testid="openView"] {
+  height: 100%;
+  background-color: #00A7E1;
+}
+
+[data-testid="openView"] main {
+  justify-content: flex-start;
+  background-color: #00A7E1;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* System messages */
+[class*="system"], [class*="System"], .system-message {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Agent name & timestamp */
+[class*="agent"], [class*="Agent"], [class*="name"], [class*="timestamp"], [class*="time"] {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
