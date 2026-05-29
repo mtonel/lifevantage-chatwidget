@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #00A7E1;
+}
+
+[data-testid="openView"] {
+  height: 100%;
+  background-color: #00A7E1;
+}
+
+[data-testid="openView"] main {
+  justify-content: flex-start;
+  background-color: #00A7E1;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* System & join messages */
+.text-label-muted .break-words.markdown p {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Timestamps */
+.fn-helper__text {
+  color: #ffffff !important;
+}
+
+/* Agent name & SYSTEM label */
+.w-full.flex-row {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
