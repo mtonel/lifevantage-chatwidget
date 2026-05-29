@@ -1,0 +1,32 @@
+/* Shrink outer container to content and clip blue to rounded corners */
+[data-testid="openView"] {
+  height: fit-content !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Remove forced tall banner */
+.banner {
+  min-height: 0 !important;
+}
+.min-h-\[70vh\] {
+  min-height: 0 !important;
+}
+
+/* White card: full width, no side gaps, flush top corners */
+.language-selection {
+  width: 100% !important;
+  margin-top: 0 !important;
+  border-radius: 0 0 12px 12px !important;
+}
+.w-\[90\%\] {
+  width: 100% !important;
+}
+.mt-\[-35vh\] {
+  margin-top: 0 !important;
+}
+
+/* Kill gap between blue and white sections */
+.gap-2 {
+  gap: 0 !important;
+}
