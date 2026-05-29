@@ -1,0 +1,19 @@
+/* Shrink outer container to content height */
+[data-testid="openView"] {
+  height: fit-content !important;
+  min-height: 0 !important;
+  gap: 0 !important;
+}
+
+/* Remove forced tall blue banner */
+.banner {
+  min-height: 0 !important;
+}
+
+/* White card: full width, flush top corners, no negative margin pull, no forced min-height */
+.language-selection {
+  width: 100% !important;
+  margin-top: 0 !important;
+  min-height: 0 !important;
+  border-radius: 0 0 12px 12px !important;
+}
