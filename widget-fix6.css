@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #29b6e8;
+}
+
+[data-testid="openView"] {
+  height: 100%;
+  background-color: #001F45;
+}
+
+[data-testid="openView"] main {
+  justify-content: flex-start;
+  background-color: #001F45;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
