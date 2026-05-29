@@ -1,0 +1,46 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+[data-testid="openView"] {
+  height: 100%;
+  background-color: #ffffff;
+}
+
+[data-testid="openView"] main {
+  justify-content: flex-start !important;
+  background-color: #ffffff;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+[data-testid="openView"] main > div > div {
+  gap: 0 !important;
+  align-items: stretch !important;
+  height: 100%;
+}
+
+.banner {
+  flex: 1 !important;
+  min-height: 0 !important;
+  background-color: #ffffff !important;
+  color: #001F45 !important;
+}
+
+.language-selection {
+  background-color: #001F45 !important;
+  color: #ffffff !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+  min-height: 0 !important;
+  border-radius: 12px !important;
+  flex-shrink: 0 !important;
+}
+
+.sc-pyfCe {
+  background-color: #ffffff !important;
+}
