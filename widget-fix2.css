@@ -1,0 +1,35 @@
+/* 1. Remove forced full-viewport height on outer container */
+[data-testid="openView"] {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* 2. Shrink blue banner — override min-h-[70vh] */
+.banner {
+  min-height: 0 !important;
+}
+.min-h-\[70vh\] {
+  min-height: 0 !important;
+}
+
+/* 3. White card — full width, no side gaps, flush top corners, no negative margin pull */
+.language-selection {
+  width: 100% !important;
+  margin-top: 0 !important;
+  border-radius: 0 0 12px 12px !important;
+}
+/* Also target by Tailwind class in case .language-selection isn't the hook */
+.w-\[90\%\] {
+  width: 100% !important;
+}
+.mt-\[-35vh\] {
+  margin-top: 0 !important;
+}
+.rounded-xl {
+  border-radius: 0 0 12px 12px !important;
+}
+
+/* 4. Kill the gap between banner and white card */
+.gap-2 {
+  gap: 0 !important;
+}
