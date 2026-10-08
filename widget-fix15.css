@@ -1,0 +1,79 @@
+/* LifeVantage - Five9 Web Messenger custom CSS
+   Revision 15: styles Five9 suggested replies using their actual DOM classes.
+   All existing branding and widget positioning is preserved.
+*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #00A7E1;
+}
+
+[data-testid="openView"] {
+  height: 100%;
+  background-color: #00A7E1;
+}
+
+[data-testid="openView"] main {
+  justify-content: flex-start;
+  background-color: #00A7E1;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* System and agent-joined messages */
+.text-label-muted .break-words.markdown p {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Timestamps */
+.fn-helper__text {
+  color: #ffffff !important;
+}
+
+/* Agent name and SYSTEM label */
+.w-full.flex-row {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Widget positioning */
+.f9ChatOpened,
+.f9ChatWidget {
+  left: 50px !important;
+  right: auto !important;
+}
+
+/* Suggested response pills
+   Inspecting Five9 shows these are DIV elements with btn classes,
+   rather than HTML <button> elements. Scope to message content so
+   header, minimize, close, and composer buttons are unaffected.
+*/
+.pn-msg .btn.btn-sm.btn-primary.btn-outline.rounded-2xl {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  padding: 8px 14px !important;
+  text-align: center !important;
+  transition: background-color 0.2s ease,
+              border-color 0.2s ease,
+              color 0.2s ease !important;
+}
+
+/* Hover: a subtle light-blue tint */
+.pn-msg .btn.btn-sm.btn-primary.btn-outline.rounded-2xl:hover {
+  background-color: #e6f7fc !important;
+  color: #007fa8 !important;
+  border-color: #007fa8 !important;
+}
+
+/* Maintain a visible focus indicator for keyboard users */
+.pn-msg .btn.btn-sm.btn-primary.btn-outline.rounded-2xl:focus-visible {
+  outline: 2px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
