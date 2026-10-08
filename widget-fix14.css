@@ -1,0 +1,93 @@
+/* LifeVantage - Five9 Web Messenger custom CSS
+   Revision 14: preserve existing theme and position while limiting
+   suggested-answer styling to text buttons in the conversation area.
+*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #00A7E1;
+}
+
+[data-testid="openView"] {
+  height: 100%;
+  background-color: #00A7E1;
+}
+
+[data-testid="openView"] main {
+  justify-content: flex-start;
+  background-color: #00A7E1;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* System and agent-joined messages */
+.text-label-muted .break-words.markdown p {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Timestamps */
+.fn-helper__text {
+  color: #ffffff !important;
+}
+
+/* Agent name and SYSTEM label */
+.w-full.flex-row {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Widget positioning */
+.f9ChatOpened,
+.f9ChatWidget {
+  left: 50px !important;
+  right: auto !important;
+}
+
+/* ---------------------------------------------------------------
+   Suggested-response pills
+
+   IMPORTANT: Do not use [data-testid="openView"] button here.
+   That also changes the header and message-composer icon buttons.
+
+   Target text-only buttons in the conversation (main), rather than
+   icon buttons containing SVGs. The surrounding outlined wrapper
+   visible in the screenshot gets the WHITE fill; its inner button
+   stays transparent to avoid the doubled/pill-within-a-pill look.
+
+   This wrapper structure is inferred from the screenshot. If Five9
+   renders the choices with a different DOM structure, inspect one
+   option and replace these selectors with its actual class.
+   --------------------------------------------------------------- */
+
+/* Outer pill: white fill and no black ring */
+[data-testid="openView"] main :is(div, span, li):has(> button:not(:has(svg)):not([aria-label])) {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  border-radius: 999px !important;
+  transition: background-color 0.2s ease,
+              border-color 0.2s ease !important;
+}
+
+/* Inner clickable label: no second white oval or extra border */
+[data-testid="openView"] main button:not(:has(svg)):not([aria-label]) {
+  background-color: transparent !important;
+  color: #333333 !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Hover on the outer pill */
+[data-testid="openView"] main :is(div, span, li):has(> button:not(:has(svg)):not([aria-label])):hover {
+  background-color: #e6f7fc !important;
+  border-color: #007fa8 !important;
+}
+
+/* Keep the inner text dark and readable on hover */
+[data-testid="openView"] main button:not(:has(svg)):not([aria-label]):hover {
+  background-color: transparent !important;
+  color: #007fa8 !important;
+}
